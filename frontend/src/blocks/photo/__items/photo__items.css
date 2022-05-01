@@ -1,0 +1,11 @@
+.photo__items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-gap: 20px 17px;
+    grid-template-columns: repeat(auto-fill, 282px);
+    grid-auto-rows: 361px;
+    color: #000000;
+    justify-content: center;
+}

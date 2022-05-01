@@ -1,0 +1,11 @@
+.photo-card__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    height: 282px;
+    min-height: 282px;
+}
+
+.photo-card__img:hover {
+    opacity: 0.9;
+}

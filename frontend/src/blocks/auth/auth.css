@@ -1,0 +1,82 @@
+.auth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-bottom: 112px;
+}
+
+.auth__title { 
+    font-size: 14px;
+    line-height: 1.21;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.auth__form {
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 358px;
+}
+
+.auth__input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    color: #fff;
+    padding-bottom: 9px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.auth__input::placeholder {
+    color: #ccc;
+}
+
+.auth__button { 
+    margin-top: 186px;
+    background-color: #fff;
+    color: #000;
+    min-height: 50px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.auth__button:hover {
+    opacity: 0.85;
+}
+
+.error {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+
+.auth__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.21;
+    margin-top: 15px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.auth__link:hover {
+    opacity: 0.85;
+}
+
+.auth__link p:first-child {
+    margin: 0;
+}
