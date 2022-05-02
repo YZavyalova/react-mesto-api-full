@@ -117,7 +117,7 @@ function App() {
     .catch(err => console.log(err))
   }
 
-
+// check
 
   function handleCardDelete (card) {
     // //используя методы массива, создаем новый массив карточек newCards, где не будет карточки

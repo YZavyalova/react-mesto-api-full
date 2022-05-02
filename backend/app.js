@@ -15,16 +15,11 @@ import auth from './middlewares/auth.js';
 import ErrorNotFound from './errors/ErrorNotFound.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
-app.use(helmet());
-app.use(cookieParser());
-app.use(bodyParser.json());
-
-app.use(requestLogger); // подключаем логгер запросов
 
 app.use(cors({
   origin: [
@@ -39,6 +34,12 @@ app.use(cors({
   ],
   credentials: true,
 }));
+
+app.use(helmet());
+app.use(cookieParser());
+app.use(bodyParser.json());
+
+app.use(requestLogger); // подключаем логгер запросов
 
 app.get('/crash-test', () => {
   setTimeout(() => {
