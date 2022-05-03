@@ -23,7 +23,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(cors({
   origin: [
-    'https://api.yzavyalova-mesto.nomoredomains.work',
+    'http://api.yzavyalova-mesto.nomoredomains.work',
     'https://yzavyalova-mesto.nomoredomains.work',
     'http://yzavyalova-mesto.nomoredomains.work',
     'https://localhost:3000',
@@ -39,11 +39,11 @@ app.use(bodyParser.json());
 
 app.use(requestLogger); // подключаем логгер запросов
 
-// app.get('/crash-test', () => {
-//   setTimeout(() => {
-//     throw new Error('Сервер сейчас упадёт');
-//   }, 0);
-// });
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,

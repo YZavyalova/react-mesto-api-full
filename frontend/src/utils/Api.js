@@ -1,4 +1,4 @@
-
+import { BASE_URL } from "./Auth";
 class Api {
     constructor(options) {
         this._url = options.url;
@@ -81,7 +81,7 @@ class Api {
 }
 
 const api = new Api({
-    url: 'http://api.yzavyalova-mesto.nomoredomains.work',
+    url: BASE_URL,
     headers: {
         // authorization: '082e7c30-145f-4e11-a3cd-66bdd63d57bc',
         'Content-Type': 'application/json'
