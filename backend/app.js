@@ -15,7 +15,7 @@ import auth from './middlewares/auth.js';
 import ErrorNotFound from './errors/ErrorNotFound.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
 
-const { PORT = 3000 } = process.env;
+export const { PORT = 3000, NODE_ENV, JWT_SECRET } = process.env;
 
 const app = express();
 

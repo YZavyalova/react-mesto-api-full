@@ -1,8 +1,9 @@
 // import jwt from 'jsonwebtoken';
+// import { NODE_ENV, JWT_SECRET } from '../app.js';
 
-// const { NODE_ENV, JWT_SECRET } = process.env;
-
-// const YOUR_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjcwZmY5ZWNmMzM0NDg5MWZjNWFlOTUiLCJpYXQiOjE2NTE1ODM2NzQsImV4cCI6MTY1MjE4ODQ3NH0.EiRwBFjh1qaKurmvJgeqt_qbsSH6ZsiAfn-6OUJDKJM'; // вставьте сюда JWT, который вернул публичный сервер студента
+// console.log(JWT_SECRET);
+// console.log(NODE_ENV);
+// const YOUR_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZmZDg5YWNmMzM0NDg5MWZjNWFlMGQiLCJpYXQiOjE2NTE1OTM2NDYsImV4cCI6MTY1MjE5ODQ0Nn0.SV8HrOXlKqvTbU8CFnBom0hOGBJDO86uwqNtdbkpiiY'; // вставьте сюда JWT, который вернул публичный сервер студента
 // const SECRET_KEY_DEV = 'JWT_SECRET'; // вставьте сюда секретный ключ для разработки из кода студента
 // try {
 //   const payload = jwt.verify(YOUR_JWT, SECRET_KEY_DEV);
