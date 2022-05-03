@@ -23,7 +23,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(cors({
   origin: [
-    'http://api.yzavyalova-mesto.nomoredomains.work',
+    'https://api.yzavyalova-mesto.nomoredomains.work',
+    'https://yzavyalova-mesto.nomoredomains.work',
     'https://yzavyalova-mesto.nomoredomains.work',
     'http://yzavyalova-mesto.nomoredomains.work',
     'https://localhost:3000',
@@ -62,11 +63,11 @@ app.use(auth);
 app.use('/', usersRouter);
 app.use('/', cardRouter);
 
-app.use(errorLogger);
-
 app.use(() => {
   throw new ErrorNotFound('Страница не найдена');
 });
+
+app.use(errorLogger);
 
 app.use(errorHandler);
 

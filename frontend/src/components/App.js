@@ -18,11 +18,13 @@ import { authorize, register, logout } from '../utils/Auth';
 function App() {
 
   const initState  = { 
-    loggedIn: false, 
+    loggedIn: false,
     userData: { 
       email: '', 
     },
   }
+
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
@@ -174,6 +176,7 @@ function App() {
           ...old,
           loggedIn: true,
         }))
+        setIsRegistered(true)
         history.push('/sign-in');
       }
     })
@@ -251,7 +254,7 @@ function App() {
       />
       <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
       <InfoTooltip
-        isAuthDone={state.loggedIn}
+        isAuthDone={state.loggedIn && isRegistered}
         isOpen={isTooltipOpen}
         onClose={closeAllPopups}
       />
