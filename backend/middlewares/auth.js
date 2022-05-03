@@ -1,13 +1,13 @@
 import jwt from 'jsonwebtoken';
 import Unauthorized from '../errors/Unauthorized.js';
 
-const { JWT_SECRET = 'JWT_SECRET' } = process.env;
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 const auth = (req, res, next) => {
   const token = req.cookies.jwt;
   let payload;
   try {
-    payload = jwt.verify(token, JWT_SECRET);
+    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'JWT_SECRET');
   } catch (err) {
     return next(new Unauthorized('Необходима авторизация'));
   }
