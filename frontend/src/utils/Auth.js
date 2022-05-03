@@ -36,13 +36,13 @@ export const authorize = (userData) => {
   })
 };
 
-export const getContent = token => {
-  return request({
-    url: '/users/me',
-    method: 'GET',
-    //token,
-  })
-};
+// export const getContent = token => {
+//   return request({
+//     url: '/users/me',
+//     method: 'GET',
+//     //token,
+//   })
+// };
 
 export const logout = () => {
   return request({

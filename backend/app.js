@@ -24,11 +24,9 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 app.use(cors({
   origin: [
     'https://api.yzavyalova-mesto.nomoredomains.work',
-    'https://localhost:3000/signup',
     'https://yzavyalova-mesto.nomoredomains.work',
     'http://yzavyalova-mesto.nomoredomains.work',
     'https://localhost:3000',
-    'https://localhost:3001/signup',
     'http://localhost:3001',
     'http://localhost:3000',
   ],
